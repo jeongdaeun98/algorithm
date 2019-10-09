@@ -77,7 +77,6 @@ void bfslogic(int dx, int dy, int dz) {
 		depth[dz][dx][dy] = depth[get<2>(node)][get<0>(node)][get<1>(node)] + 1;
 		if (maxnum < depth[dz][dx][dy])
 			maxnum = depth[dz][dx][dy];
-		cout << dz << dx << dy << " " << depth[dz][dx][dy] << "\n";
 	}
 	else if (dx >= 0 && dx < n && dy >= 0 && dy < m && dz >= 0 && dz < h && !visited[dz][dx][dy])
 		visited[dz][dx][dy] = true;
