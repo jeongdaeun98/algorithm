@@ -21,13 +21,13 @@ void initVisited() {
 			visited[i][j] = false;
 	}
 }
-void bfs(int x, int y) {
+void dfs(int x, int y) {
 	visited[x][y] = true;
 	for (int i = 0; i < 4; i++) {
 		int dx = directx[i] + x;
 		int dy = directy[i] + y;
 		if (dx < n && dx >= 0 && dy < n && dy >= 0 && !visited[dx][dy] && abs(landland[dx][dy] - landland[x][y]) <= h) {	
-			bfs(dx, dy);
+			dfs(dx, dy);
 		}
 		else if (dx < n && dx >= 0 && dy < n && dy >= 0 && !visited[dx][dy] && abs(landland[dx][dy] - landland[x][y]) > h) {
 			q.push(make_tuple(abs(landland[dx][dy] - landland[x][y]),dx,dy));
@@ -37,14 +37,14 @@ void bfs(int x, int y) {
 
 
 }
-void searchBfs() {
-	bfs(0, 0);
+void searchDfs() {
+	dfs(0, 0);
 	while(!q.empty()){
 		tuple<int,int,int> node = q.top();
 		q.pop();
 		if (!visited[get<1>(node)][get<2>(node)]) {
 			resultanswer += get<0>(node);
-			bfs(get<1>(node), get<2>(node));
+			dfs(get<1>(node), get<2>(node));
 		}
 	}
 }
@@ -53,6 +53,6 @@ int solution(vector<vector<int>> land, int height) {
 	n = landland.size();
 	h = height;
 	initVisited();
-	searchBfs();
+	searchDfs();
 	return resultanswer;
 }
