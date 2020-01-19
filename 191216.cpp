@@ -21,7 +21,6 @@ void dfs(int index, int chickenNum) {
 		result = min(sum, result);
 		return;
 	}
-	
 	visited[index] = true;
 	dfs(index + 1, chickenNum + 1);
 	visited[index] = false;
