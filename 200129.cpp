@@ -11,5 +11,5 @@ string solution(vector<string> participant, vector<string> completion) {
 		if (completion[i] != participant[i]) {
 			return participant[i];
 		}
-		}
+	}
 }
