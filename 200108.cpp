@@ -4,6 +4,7 @@
 using namespace std;
 int answer = 0;
 void makeNumber(int sum,vector<int> &numbers,int target,int index) {
+	
 	if (sum == target) { answer++;  return; }
 	if (index == numbers.size()) return;
 	numbers[index] *= 1;
