@@ -8,13 +8,14 @@ using namespace std;
 class Compare{
 public:
     bool operator() (pair<int, int> lhs, pair<int, int> rhs){
-        if (lhs.first == rhs.first;
+        if (lhs.first == rhs.first) return lhs.second > rhs.second;
+        return lhs.first < rhs.first;
     }
 };
  
 vector<int> solution(vector<string> genres, vector<int> plays) {
     vector<int> answer;
-    priority_queue<pair<int, int>, vector<pair<int,int>>, less<pair<int,int>>> musicQ;
+    priority_queue<pair<int, int>, vector<pair<int,int>>, Compare> musicQ;
     unordered_map<string, vector<int>> genreMap;
     unordered_map<string, int> sortingGenreMap;
     priority_queue<pair<int, string>, vector<pair<int, string>>, less<pair<int, string>>> genreQ;
