@@ -4,3 +4,4 @@ Project1.vcxproj.filters
 Project1.vcxproj.user
 .DS_Store
 .vs_code
+*.dSym
