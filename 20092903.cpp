@@ -24,5 +24,5 @@ int solution(string &S) {
     if(S[S.size() - 1] != 'a'){
         totalCount += 2;
     }
-    else return totalCount;
+    return totalCount;
 }
