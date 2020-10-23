@@ -5,3 +5,4 @@ Project1.vcxproj.user
 .DS_Store
 .vs_code
 *.dSym
+*.exec

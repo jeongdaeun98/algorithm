@@ -28,6 +28,7 @@
             "label": "C++ bulid for clang++",
             "command": "clang++",
             "args": [
+                "-std=c++17",
                 "-g",
                 "${file}",
                 "-o",
