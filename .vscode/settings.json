@@ -21,6 +21,7 @@
         "__tuple": "cpp",
         "__node_handle": "cpp",
         "iostream": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "ios": "cpp"
     }
 }
