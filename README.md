@@ -44,6 +44,24 @@ https://www.hackerrank.com/dashboard
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
 |      |      |
+## dijkstra
+### Hacker Rank
+| 문제 | 문제 풀이 설명 | 
+| -------- | -------- |
+| |      |
+
+### baekjoon
+| 문제 | 문제 풀이 설명 | 
+| -------- | -------- |
+|  [알고스팟](https://github.com/jeongdaeun98/algorithm/blob/master/20102301.cpp) |      |
+### programmers
+| 문제 | 문제 풀이 설명 | 
+| -------- | -------- |
+|      |      |
+### 기타
+| 문제 | 문제 풀이 설명 | 
+| -------- | -------- |
+|      |      |
 ## dfs & bfs
 ### Hacker Rank
 | 문제 | 문제 풀이 설명 | 
@@ -89,11 +107,14 @@ https://www.hackerrank.com/dashboard
 ### baekjoon
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
-|      |      |
+|[가운데를 말해요](https://github.com/jeongdaeun98/algorithm/blob/master/20102305.cpp)|      |
+|[최대힙](https://github.com/jeongdaeun98/algorithm/blob/master/20102303.cpp)|      |
+|[최소힙](https://github.com/jeongdaeun98/algorithm/blob/master/20102303.cpp)|      |
+|[절댓값 힙](https://github.com/jeongdaeun98/algorithm/blob/master/20102304.cpp)|      |
 ### programmers
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
-|      |      |
+|[이중우선순위힙](https://github.com/jeongdaeun98/algorithm/blob/master/20102306.cpp)|      |
 ### 기타
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
