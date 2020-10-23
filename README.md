@@ -16,7 +16,7 @@ https://www.hackerrank.com/dashboard
 ## sort
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
-|      |      |
+|[해커랭크 Fraudulent Activity Notifications](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20100706.cpp)|[count sort](https://daewoony.tistory.com/18)|
 
 ## dijkstra
 | 문제 | 문제 풀이 설명 | 
