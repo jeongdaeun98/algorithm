@@ -21,14 +21,14 @@ https://www.hackerrank.com/dashboard
 |[백준 날짜 계산](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102704.cpp)||
 |[백준 테르로미노](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102705.cpp)|[테르로미노](https://daewoony.tistory.com/25)|
 |[백준 다음 순열](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102706.cpp)|[다음 순열](https://daewoony.tistory.com/24)|
-|[백준 이전 순열](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102801.cpp)|[이전 순열]()|
+|[백준 이전 순열](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102801.cpp)|[이전 순열](https://daewoony.tistory.com/27)|
 |[백준 모든 순열](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102802.cpp)|[순열]()|
 |[백준 차이를 최대로](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102803.cpp)|[순열]()|
 |[백준 N과 M (5)](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102804.cpp)|[조합 후 순열]()|
 |[백준 N과 M (6)](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102805.cpp)|[조합]()|
-|[백준 N과 M (7)](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102806.cpp)|[중복 순열]()|
-|[백준 N과 M (8)](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102807.cpp)|[중복 조합]()|
-|[백준 ABCDE](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102808.cpp)|[dfs]()|
+|[백준 N과 M (7)](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102806.cpp)|[중복 순열](https://daewoony.tistory.com/29)|
+|[백준 N과 M (8)](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102807.cpp)|[중복 조합](https://daewoony.tistory.com/30)|
+|[백준 ABCDE](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102808.cpp)|[dfs](https://daewoony.tistory.com/31)|
 |[백준 숨바꼭질 3](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102809.cpp)|[dijstra](https://daewoony.tistory.com/26)|
 ## stack
 | 문제 | 문제 풀이 설명 | 
