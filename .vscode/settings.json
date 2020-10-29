@@ -22,6 +22,9 @@
         "__node_handle": "cpp",
         "iostream": "cpp",
         "iosfwd": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "ratio": "cpp",
+        "ostream": "cpp",
+        "functional": "cpp"
     }
 }
