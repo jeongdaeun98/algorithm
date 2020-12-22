@@ -8,12 +8,24 @@ https://programmers.co.kr/
 해커랭크
 https://www.hackerrank.com/dashboard
 
+## 목표
+|날짜 | 목표 |
+| ---- | ----- |
+|11/30| [1p 올쏠](https://daewoony.tistory.com/47)
+
 ## math
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
 |[백준 최대공약수와 최소공배수](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102701.cpp)|[최대공약수 최소공배수](https://daewoony.tistory.com/23)|
 |[백준 GCD 합](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102702.cpp)|[최대공약수 최소공배수](https://daewoony.tistory.com/23)|
 |[백준 최소공배수](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102703.cpp)|[최대공약수 최소공배수](https://daewoony.tistory.com/23)|
+|[백준 숨바꼭질 6](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110404.cpp)|[최대공약수](https://daewoony.tistory.com/57?category=766844)|
+|[백준 팩토리얼 0의 개수](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110402.cpp)||
+|[백준 조합 0의 개수](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110403.cpp)|[brute force](https://daewoony.tistory.com/56?category=766844)|
+|[백준 2진수 8진수](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110405.cpp)||
+|[백준 8진수 2진수](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110406.cpp)||
+|[백준 진법 변환](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110410.cpp)||
+|[백준 진법 변환 2](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110409.cpp)||
 
 ## bruteForce
 | 문제 | 문제 풀이 설명 | 
@@ -40,6 +52,15 @@ https://www.hackerrank.com/dashboard
 |[백준 연산자 끼워넣기](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102906.cpp)|[dfs](https://daewoony.tistory.com/35)|
 |[백준 연산자 끼워넣기(2)](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102907.cpp)|[dfs 4분기](https://daewoony.tistory.com/35)|
 |[백준 수 이어 쓰기 1](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110307.cpp)|[brute force](https://daewoony.tistory.com/50)|
+|[백준 리모컨](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110401.cpp)|[brute force](https://daewoony.tistory.com/55)|
+|[백준 카잉 달력](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111004.cpp)|[brute force](https://daewoony.tistory.com/60)|
+|[백준 스타트와 링크](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111305.cpp)|[brute force](https://daewoony.tistory.com/66?category=766844)|
+|[백준 외판원 순회 2](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110601.cpp)|[brute force](https://daewoony.tistory.com/59?category=766844)|
+|[백준 소인수분해](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111301.cpp)|[brute force](https://daewoony.tistory.com/62?category=766844)|
+|[백준 사탕게임](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110602.cpp)|해야함|
+|[codility base Conversion](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111302.cpp)||
+|[백준 스도쿠](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111801.cpp)|[brute force](https://daewoony.tistory.com/69?category=766844)|
+
 ## stack
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
@@ -49,12 +70,16 @@ https://www.hackerrank.com/dashboard
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
 |[해커랭크 Fraudulent Activity Notifications](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20100706.cpp)|[count sort](https://daewoony.tistory.com/18)|
-
+|[백준 줄세우기](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110305.cpp)|[위상정렬]()|
+|[백준 문제집](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110306.cpp)|[위상정렬]()|
+|[백준 부등호](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110308.cpp)|[위상정렬]()|
+|[백준 작업](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110309.cpp)|[위상정렬]()|
 ## dijkstra
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
 |  [알고스팟](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102301.cpp) |      |
 |[백준 숨바꼭질 3](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102809.cpp)|[dijstra](https://daewoony.tistory.com/26)|
+
 ## dfs & bfs
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
@@ -62,6 +87,13 @@ https://www.hackerrank.com/dashboard
 |[백준 ABCDE](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102808.cpp)|[dfs](https://daewoony.tistory.com/31)|
 |[백준 이모티콘](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102905.cpp)|[bfs](https://daewoony.tistory.com/34)|
 |[백준 퇴사](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102908.cpp)|[dfs](https://daewoony.tistory.com/36)|
+|[백준 숨바꼭질 4](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110407.cpp)|[bfs](https://daewoony.tistory.com/58?category=766844)|
+|[백준 부분 수열의 합](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111003.cpp)|[dfs](https://daewoony.tistory.com/61?category=766844)|
+|[백준 부분 수열의 합 2](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111005.cpp)|[dfs](https://daewoony.tistory.com/61?category=766844)|
+|[백준 N-queen](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111304.cpp)||
+|[백준 숨바꼭질 2](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111701.cpp)|[bfs](https://daewoony.tistory.com/68?category=766844)|
+|[백준 구슬 탈출(2)](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20121801.cpp)|[bfs](https://daewoony.tistory.com/72?category=766844)|
+
 ## hash
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
@@ -75,17 +107,7 @@ https://www.hackerrank.com/dashboard
 |[백준 절댓값 힙](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102304.cpp)|      |
 | -------- | -------- |
 |[프로그래머스 이중우선순위힙](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20102306.cpp)|      |
-가장 긴 증가하는 부분수열
-가장 긴 증가하는 부분수열 4
 
-가장 큰 증가 부분수열
-가장 긴 감소하는 부분 수열
-연속합
-
-연속합(2)
-제곱수의 합
-
-합분해
 ## Dynamic Programming (DP)
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
@@ -104,10 +126,11 @@ https://www.hackerrank.com/dashboard
 |[백준 제곱수의 합](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110303.cpp)|[DP](https://daewoony.tistory.com/46)|
 |[백준 합분해](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110304.cpp)|[DP](https://daewoony.tistory.com/48)|
 |[백준 가장 긴 바이토닉 부분 수열](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110310.cpp)|[DP](https://daewoony.tistory.com/49)|
+
 ## greedy
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
-|      |      |
+|[백준 단어 수학](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111001.cpp)|[greedy](https://daewoony.tistory.com/65?category=766844)|
 ## binary search
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
