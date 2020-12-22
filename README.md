@@ -93,7 +93,7 @@ https://www.hackerrank.com/dashboard
 |[백준 N-queen](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111304.cpp)||
 |[백준 숨바꼭질 2](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111701.cpp)|[bfs](https://daewoony.tistory.com/68?category=766844)|
 |[백준 구슬 탈출(2)](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20121801.cpp)|[bfs](https://daewoony.tistory.com/72?category=766844)|
-
+|[백준 로봇 청소기](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20122202.cpp)|[bfs,simulation](https://daewoony.tistory.com/73)|
 ## hash
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
