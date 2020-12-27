@@ -13,6 +13,17 @@ https://www.hackerrank.com/dashboard
 | ---- | ----- |
 |11/30| [1p 올쏠](https://daewoony.tistory.com/47)
 
+## 구현
+| 문제 | 문제 풀이 설명 | 
+| -------- | -------- |
+|[백준 경사로](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20122302.cpp)|[구현,삼성기출](https://daewoony.tistory.com/75)|
+
+## 시뮬레이션
+| 문제 | 문제 풀이 설명 | 
+| -------- | -------- |
+|[백준 경사로](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20122302.cpp)|[구현,삼성기출](https://daewoony.tistory.com/75)|
+|[백준 드래곤 커브](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20122502.cpp)|[구현,삼성기출](https://daewoony.tistory.com/80)|
+
 ## math
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
@@ -60,7 +71,7 @@ https://www.hackerrank.com/dashboard
 |[백준 사탕게임](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20110602.cpp)|해야함|
 |[codility base Conversion](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111302.cpp)||
 |[백준 스도쿠](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20111801.cpp)|[brute force](https://daewoony.tistory.com/69?category=766844)|
-
+|[백준 스도쿠](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20122701.cpp)|[brute force](https://daewoony.tistory.com/81)|
 ## stack
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
