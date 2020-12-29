@@ -24,7 +24,8 @@ https://www.hackerrank.com/dashboard
 |[백준 경사로](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20122302.cpp)|[구현,삼성기출](https://daewoony.tistory.com/75)|
 |[백준 드래곤 커브](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20122502.cpp)|[구현,삼성기출](https://daewoony.tistory.com/80)|
 |[백준 미세먼지 안녕!](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20122802.cpp)|[구현,삼성기출](https://daewoony.tistory.com/83)|
-
+|[백준 이차원 배열과 연산](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20122901.cpp)|[구현,삼성기출](https://daewoony.tistory.com/84?category=766844)|
+|[백준 낚시왕](https://github.com/jeongdaeun98/algorithm/blob/master/2020/20122902.cpp)|[구현,삼성기출](https://daewoony.tistory.com/85)|
 ## math
 | 문제 | 문제 풀이 설명 | 
 | -------- | -------- |
