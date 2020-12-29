@@ -36,10 +36,6 @@ vector<int> sortNum(vector<int> a){
     }
     return answer;
 }
-bool isBiggerThanColumnCount(vector<vector<int>> a){
-    size_t columnCount = getColumnCount(a);
-    return columnCount < a.size() || columnCount == a.size();
-}
 vector<vector<int>> rowToColumn(vector<vector<int>> a, int columnCount){
     vector<vector<int>> answer;
     for(int i = 0; i < columnCount; i++){
@@ -94,7 +90,7 @@ int main(void){
             break;
         }
         time++;
-        if(isBiggerThanColumnCount(a)){
+        if(a.size() > a[0].size() || a.size() == a[0].size()){
             vector<vector<int>> realA;
             for(int i = 0; i < a.size(); i++){
                 realA.push_back(sortNum(a[i]));
@@ -114,7 +110,6 @@ int main(void){
             }
             aVector = addZero(aVector);
             a = rowToColumn(aVector, getColumnCount(aVector));
-            a = addZero(a);
         }
     }
 }
