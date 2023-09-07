@@ -11,9 +11,9 @@ public class Solution {
                 if(board[j][i] != '.' && !columns.add(board[j][i])) {
                     return false;
                 }
-                int columnIndex = 3 * (i % 3);
-                int rowIndex = 3 * (i / 3);
-                if(board[columnIndex + j % 3][rowIndex + j / 3] != '.' && !boxes.add(board[columnIndex + j % 3][rowIndex + j / 3])){
+                int a = 3 * (i % 3);
+                int b = 3 * (i / 3);
+                if(board[a + j % 3][b + j / 3] != '.' && !boxes.add(board[a + j % 3][b + j / 3])){
                     return false;
                 }
             }
