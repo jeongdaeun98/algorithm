@@ -6,6 +6,7 @@ class Solution {
         int answer = 0;
         for(int i = 0; i < gas.length; i++) {
             sum += gas[i] - cost[i];
+            
             if(sum < 0) {
                 total += sum;
                 sum = 0;
