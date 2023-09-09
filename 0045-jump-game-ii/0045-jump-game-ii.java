@@ -1,16 +1,15 @@
 class Solution {
     public int jump(int[] nums) {
-        int count = 0;
-        int jump = 0;
-        int nextJump = 0;
-        
+        int changeCount = 0;
+        int interval = 0;
+        int newInterval = 0;
         for(int i = 0; i < nums.length - 1; i++) {
-            nextJump = Math.max(nextJump, i + nums[i]);
-            if(i == jump) {
-                count++;
-                jump = nextJump;
+            newInterval = Math.max(newInterval, nums[i] + i);
+            if(i == interval) {
+                changeCount++;
+                interval = newInterval;
             }
         }
-        return count;
+        return changeCount;
     }
 }
