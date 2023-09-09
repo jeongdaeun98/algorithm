@@ -1,23 +1,19 @@
-import java.util.*;
-
 class Solution {
     public List<String> generateParenthesis(int n) {
-        List<String> answer = new ArrayList<>();
-        generate(n - 1, n, "(", answer);
-        return answer;
+        List<String> parenthesis = new ArrayList<>();
+        generate(parenthesis, n, n, "");
+        return parenthesis;
     }
-    
-    public void generate(int open, int close, String bracket, List<String> answer) {
-        if(open == 0 && close == 0) {
-            answer.add(bracket);
+    public void generate(List<String> parenthesis, int left, int right, String parenthese) {
+        if(left == 0 && right == 0) {
+            parenthesis.add(parenthese);
             return;
         }
-        
-        if(open < close) {
-            generate(open, close - 1, bracket + ")", answer);
-        }
-        if(open > 0) {
-            generate(open - 1, close, bracket + "(", answer);
+        if(left > 0) {
+            generate(parenthesis, left - 1, right, parenthese + "(");
+        } 
+        if(left < right) {
+            generate(parenthesis, left, right - 1, parenthese + ")");
         }
     }
 }
