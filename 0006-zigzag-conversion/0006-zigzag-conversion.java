@@ -9,12 +9,11 @@ class Solution {
             tempString[i] = "";
         }
         for(int i = 0; i < s.length(); i++) {
-            String str = Character.toString(s.charAt(i));
-            int index = i %(2*numRows -2);
+            int index = i % (2*(numRows - 1));
             if(index >= numRows) {
                 index = 2*(numRows - 1) - index;
             }
-            tempString[index] += str;
+            tempString[index] += Character.toString(s.charAt(i));
         }
         return Arrays.stream(tempString).collect(Collectors.joining());
     }
