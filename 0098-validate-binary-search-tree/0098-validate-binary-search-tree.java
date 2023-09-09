@@ -24,11 +24,12 @@ class Solution {
         if(node == null || !valid.get()) {
             return;
         }
-        if(max != null && max <= node.val) {
+        
+        if(min != null && min >= node.val) {
             valid.set(false);
             return;
         }
-        if(min != null && min >= node.val) {
+        if(max != null && max <= node.val) {
             valid.set(false);
             return;
         }
