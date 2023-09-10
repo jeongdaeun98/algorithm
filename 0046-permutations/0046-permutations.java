@@ -1,19 +1,18 @@
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> answers = new ArrayList<>();
-        permutation(answers, nums, 0, nums.length);
+        permutation(nums, answers, 0);
         return answers;
     }
-    
-    public void permutation(List<List<Integer>> answers, int[] nums, int start, int end) {
+    public void permutation(int[]nums, List<List<Integer>> answers, int start){
         if(start == nums.length) {
             answers.add(Arrays.stream(nums).boxed().collect(Collectors.toList()));
             return;
         }
-        for(int i = start; i < end; i++) {
-            swap(nums, start, i);
-            permutation(answers, nums, start + 1 , end);
-            swap(nums, start, i);
+        for(int i = start; i < nums.length; i++) {
+            swap(nums, i, start);
+            permutation(nums, answers, start + 1);
+            swap(nums, i, start);
         }
     }
     public void swap(int[] nums, int i, int j) {
