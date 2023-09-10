@@ -14,7 +14,6 @@ class Solution {
             return;
         }
         for(int j = nums.length - 1; j > index; j--) {
-            System.out.println(nums[index]);
             if(nums[index] < nums[j]) {
                 swap(nums, index, j);
                 break;
