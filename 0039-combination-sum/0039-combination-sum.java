@@ -1,23 +1,29 @@
-import java.util.*;
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> answers = new ArrayList<>();
         LinkedList<Integer> answer = new LinkedList<>();
-        combination(candidates, answer, answers, target, 0);
+        List<List<Integer>> answers = new ArrayList<>();
+        combination(candidates, answers, answer, target, 0, 0);
         return answers;
     }
     
-    public void combination(int[] candidates, LinkedList<Integer> answer, List<List<Integer>> answers, int target, int index){
-        if(target == 0) {
-            answers.add(new ArrayList<Integer>(answer));
+    public void combination(int[] candidates, List<List<Integer>> answers, LinkedList<Integer> answer, int target, int sum, int index) {
+        if(sum == target) {
+            answers.add(new ArrayList<>(answer));
             return;
         }
-        if(target < 0 || index >= candidates.length) {
+        if(sum > target) {
             return;
         }
+        if(answer.size() == 150) {
+            return;
+        }
+        if(index == candidates.length) {
+            return;
+        }
+        
         answer.add(candidates[index]);
-        combination(candidates, answer, answers, target - candidates[index], index);
+        combination(candidates, answers, answer, target, sum + candidates[index], index);
         answer.removeLast();
-        combination(candidates, answer, answers, target, index + 1);
+        combination(candidates, answers, answer, target, sum, index + 1);
     }
 }
