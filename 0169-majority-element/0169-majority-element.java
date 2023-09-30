@@ -1,24 +1,25 @@
-import java.util.*;
-
 class Solution {
     public int majorityElement(int[] nums) {
-        int answer = 0;
+        Arrays.sort(nums);
+        int count = 0;
         int maxCount = 0;
-        Map<Integer, Integer> frequencyMap = new HashMap<>();
-        for(int i = 0 ; i < nums.length; i++) {
-            if(!frequencyMap.containsKey(nums[i])){
-                frequencyMap.put(nums[i], 1);
-            } else {
-                frequencyMap.put(nums[i], frequencyMap.get(nums[i]) + 1);
+        int thisNumber = nums[0];
+        int majorityElement = 0;
+        for(int num : nums) {
+    
+            if(num != thisNumber) {
+                if(maxCount < count) {
+                    maxCount = count;
+                    majorityElement = thisNumber;
+                    count = 0;
+                }
+                thisNumber = num;
             }
-        }  
-        
-        for (Integer key : frequencyMap.keySet()) {
-            if(maxCount < frequencyMap.get(key)) {
-                answer = key;
-                maxCount = frequencyMap.get(key);
-            }
+            count++;
         }
-        return answer;
+        if(maxCount < count) {
+            majorityElement = thisNumber;
+        }
+        return majorityElement;
     }
 }
