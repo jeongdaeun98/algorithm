@@ -1,21 +1,14 @@
-import java.util.*;
 class Solution {
     public boolean isPalindrome(String s) {
-        String string = s.replaceAll("[^a-zA-Z0-9]", "");
-        string = string.toLowerCase();
-        return checkPalindrome(string);
-    }
-    
-    
-    public boolean checkPalindrome(String s) {
-        int i = 0;
-        int j = s.length() - 1;
-        while(i < j) {
-            if(s.charAt(i) != s.charAt(j)){
+        s = s.trim();
+        s = s.toLowerCase();
+        s = s.replaceAll("[^a-z\\d]","");
+        StringBuilder sb = new StringBuilder(s);
+        String str = sb.reverse().toString();
+        for(int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) != str.charAt(i)){
                 return false;
             }
-            i++;
-            j--;
         }
         return true;
     }
