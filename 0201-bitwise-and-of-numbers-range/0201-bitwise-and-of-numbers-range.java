@@ -6,6 +6,6 @@ class Solution {
             right = right >> 1;
             shift++;
         }
-        return right << shift;
+        return left << shift;
     }
 }
