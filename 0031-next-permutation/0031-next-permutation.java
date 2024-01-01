@@ -1,34 +1,33 @@
 class Solution {
     public void nextPermutation(int[] nums) {
-        int lastIndex = nums.length - 1;
         boolean isNext = false;
-        for(int i = lastIndex; i > 0; i--) {
-            if(nums[i - 1] < nums[i]) {
+        for(int i = nums.length - 1; i >= 1; i--) {
+            if(i - 1 >= 0 && nums[i - 1] < nums[i]){
                 isNext = true;
-                for(int j = lastIndex; j >= i; j--) {
+                for(int j = nums.length - 1; j >= i; j--) {
                     if(nums[i - 1] < nums[j]) {
-                        swap(i - 1,nums, j);
+                        swap(i - 1, j, nums);
                         break;
                     }
                 }
-                int[] copiedArray = Arrays.copyOfRange(nums, i, lastIndex + 1);
-                Arrays.sort(copiedArray);
-                replace(i, copiedArray, nums);
+                int[] copyNums = Arrays.copyOfRange(nums,i, nums.length);
+                Arrays.sort(copyNums);
+                replaceArray(nums, copyNums, i, nums.length);
                 break;
             }
-        }
+    }
         if(!isNext) {
             Arrays.sort(nums);
         }
     }
-    public void swap(int index, int[] nums, int changeIndex) {
-        int temp = nums[changeIndex];
-        nums[changeIndex] = nums[index];
-        nums[index] = temp;
+    public void swap(int i, int j, int[] nums) {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
     }
-    public void replace(int index, int[] copiedArray, int[]nums) {
-        for(int i = 0; i < copiedArray.length; i++) {
-            nums[index + i] = copiedArray[i];
+    public void replaceArray(int[] nums, int[] copyNums, int start, int end) {
+        for(int i = start; i < end; i++) {
+            nums[i] = copyNums[i - start];
         }
     }
 }
