@@ -1,23 +1,27 @@
 class Solution {
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> answers = new ArrayList<>();
-        int[] answer = new int[nums.length];
-        boolean[] visited = new boolean[nums.length];
-        permutation(answer, answers, visited, 0, nums);
+        LinkedList<Integer> answer = new LinkedList<>();
+        boolean[] visit = new boolean[nums.length];
+        Arrays.fill(visit, false);
+        permutation(answers, answer, nums, visit);
         return answers;
     }
-    public void permutation(int[] answer, List<List<Integer>> answers, boolean[] visited, int index, int[] nums) {
-        if(nums.length == index) {
-            answers.add(Arrays.stream(answer).boxed().collect(Collectors.toList()));
+    public void permutation(List<List<Integer>>answers, LinkedList<Integer> answer, int[]nums,boolean[]visit) {
+        if(answer.size() == nums.length) {
+            answers.add(new ArrayList<>(answer));
             return;
         }
+        
         for(int i = 0; i < nums.length; i++) {
-            if(!visited[i]) {
-                visited[i] = true;
-                answer[index] = nums[i];
-                permutation(answer, answers, visited, index + 1, nums);
-                visited[i] = false;
+            if(visit[i]){
+                continue;
             }
+            visit[i] = true;
+            answer.add(nums[i]);
+            permutation(answers, answer, nums, visit);
+            answer.removeLast();
+            visit[i] = false;
         }
     }
 }
