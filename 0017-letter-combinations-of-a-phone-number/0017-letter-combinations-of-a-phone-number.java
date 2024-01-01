@@ -1,38 +1,37 @@
+import java.util.*;
 class Solution {
     public List<String> letterCombinations(String digits) {
-        Map<Character, String> numberAndLetters = new HashMap<>();
-        List<String> answer = new ArrayList<>();
-        if(digits.equals("")) {
-            return answer;
-        }
-        numberAndLetters.put('2', "abc");
-        numberAndLetters.put('3', "def");
-        numberAndLetters.put('4', "ghi");
-        numberAndLetters.put('5', "jkl");
-        numberAndLetters.put('6', "mno");
-        numberAndLetters.put('7', "pqrs");
-        numberAndLetters.put('8', "tuv");
-        numberAndLetters.put('9', "wxyz");
-        List<String> letters = new ArrayList<>();
+        Map<Integer, String> numberAndDigits = new HashMap<>();
+        numberAndDigits.put(2, "abc");
+        numberAndDigits.put(3, "def");
+        numberAndDigits.put(4, "ghi");
+        numberAndDigits.put(5, "jkl");
+        numberAndDigits.put(6, "mno");
+        numberAndDigits.put(7, "pqrs");
+        numberAndDigits.put(8, "tuv");
+        numberAndDigits.put(9, "wxyz");
+        List<String> digit = new ArrayList<>();
         for(int i = 0; i < digits.length(); i++) {
-            if(numberAndLetters.containsKey(digits.charAt(i))) {
-                letters.add(numberAndLetters.get(digits.charAt(i)));
-            }
+            digit.add(numberAndDigits.get(digits.charAt(i) - '0'));
         }
-        combination(letters, answer, 0, "");
-        return answer;
+        List<String> answers = new ArrayList<>();
+        combination(answers, "", 0, digit);
+        if(digits.equals("")) {
+            return new ArrayList<>();
+        }
+        return answers;
     }
-    public void combination(List<String> letters, List<String> answer, int index, String letter){
-        if(letter.length() == letters.size()) {
-            answer.add(letter);
+    public void combination(List<String> answers, String answer, int index, List<String> digits) {
+        if(answer.length() == digits.size()) {
+            answers.add(answer);
             return;
         }
-        if(index >= letters.size()) {
+        if(index == digits.size()) {
             return;
         }
-        for(int i = 0; i < letters.get(index).length(); i++) {
-            combination(letters, answer, index + 1, letter + letters.get(index).charAt(i));
-            combination(letters, answer, index + 1, letter);
+        for(int i = 0; i < digits.get(index).length(); i++) {
+            combination(answers, answer + digits.get(index).charAt(i), index + 1, digits);
+            combination(answers, answer, index + 1, digits);
         }
     }
 }
