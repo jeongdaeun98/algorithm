@@ -1,11 +1,10 @@
-import java.util.*;
-//1. 가장 마지막 인덱스를 문자열을 순회하면서 기록
-//2. 문자열 순회, 문자 값을 스택에 기록, 기록된 문자라면 패스
-//3. 현재 인덱스가 마지막 인덱스보다 작고, 인덱스가 가리키는 문자가 최상단의 값보다 작다면 스택에서 뺌
+//1. 알파벳 별 마지막 인덱스를 설정
+//2. 순회하면서 스택에 알파벳을 넣는데, 순회 인덱스가 스택 알파벳의 마지막 인덱스보다 작고, 순회 알파벳이 스택 알파벳보다 작을 경우 스택 빼고 방문 표시 안함으로 설정
+//3. 스택에 데이터 reverse 후 리턴
 class Solution {
     public String smallestSubsequence(String s) {
-        int[] lastIndex = new int[26];
-        boolean[] seek = new boolean[26];
+        int lastIndex[] = new int[26];
+        boolean seek[] = new boolean[26];
         for(int i = 0; i < s.length(); i++) {
             lastIndex[s.charAt(i) - 'a'] = i;
         }
@@ -16,11 +15,10 @@ class Solution {
                 continue;
             }
             while(!stack.isEmpty() && i < lastIndex[stack.peek()] && ch < stack.peek()) {
-                seek[stack.peek()] = false;
-                stack.pop();
+                seek[stack.pop()] = false;
             }
-            seek[ch] = true;
             stack.push(ch);
+            seek[ch] = true;
         }
         StringBuilder sb = new StringBuilder();
         while(!stack.isEmpty()) {
