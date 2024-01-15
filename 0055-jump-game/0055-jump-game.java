@@ -1,19 +1,23 @@
-// 순회한다.
-// 순회하면서 range 끝까지 도달했을 때, 최대 range 마지막 인덱스로 변경한다.
-// 그 인덱스가 마지막 인덱스보다 크거나 같다면 true 리턴
+// 1. 인덱스 이동 시, 현 jump랑 과거에 가장 큰 Jumpr값 중 가장 큰 jump 값으로 갱신
+// 2. 이동할 때마다 감소
+// 3. 마지막 이동했을 때 0보다 크거나 같으면 true 리턴
 class Solution {
     public boolean canJump(int[] nums) {
-        int interval = nums[0];
-        int maxInterval = 0;
-        for(int i = 0; i < nums.length; i++) {
-            maxInterval = Math.max(maxInterval, i + nums[i]);
-            if(interval == i) {
-                interval = maxInterval;
-            }
-            if(interval >= nums.length - 1) {
-                return true;
+        int jump = nums[0];
+        if(nums.length == 1) {
+            return true;
+        }
+        for(int i = 1; i < nums.length - 1; i++) {
+            jump--;
+            if(jump >= 0) {
+                jump = Math.max(jump, nums[i]);
+            } else {
+                return false;
             }
         }
-        return false;
+        if(jump <= 0) {
+            return false;
+        }
+        return true;
     }
 }
