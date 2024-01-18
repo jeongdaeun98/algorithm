@@ -1,6 +1,6 @@
 import java.util.*;
 class MyStack {
-        LinkedList<Integer> q;
+        Queue<Integer> q;
 
     public MyStack() {
         q = new LinkedList<>();
@@ -8,14 +8,18 @@ class MyStack {
     
     public void push(int x) {
         q.add(x);
+        for(int i = 0; i < q.size() - 1; i++) {
+            int v = q.poll();
+            q.add(v);
+        }
     }
     
     public int pop() {
-        return q.removeLast();
+        return q.poll();
     }
     
     public int top() {
-        return q.get(q.size() - 1);
+        return q.peek();
     }
     
     public boolean empty() {
