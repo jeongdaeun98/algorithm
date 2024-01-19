@@ -1,13 +1,14 @@
-// 1. 순회한다.
-// 2. 현재 가리키는 값과 이전의 인덱스에 저장된 값 중 더 큰 값으로 설정
-// 3. max sum을 기록
+// 자신으로부터 앞에 인덱스를 더한 것과 자신 중 가장 큰 것을 dp 에 저장.
+// 가장 큰 값 answer로 리턴
 class Solution {
     public int maxSubArray(int[] nums) {
-        int sum = nums[0];
+        int[] dp = new int[nums.length];
+        int answer = nums[0];
+        dp[0] = nums[0];
         for(int i = 1; i < nums.length; i++) {
-            nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]);
-            sum = Math.max(sum, nums[i]);
+            dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
+            answer = Math.max(answer, dp[i]);
         }
-        return sum;
+        return answer;
     }
 }
