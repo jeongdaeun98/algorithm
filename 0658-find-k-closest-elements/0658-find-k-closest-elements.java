@@ -3,7 +3,7 @@
 // 3. x - arr[mid]가 더 크다면 오른쪽으로
 // 4. arr[mid + k] - x가 더 크다면 왼쪽으로 슬라이딩 해야함.
 // 5. 오른쪽 슬라이딩은 left = mid + 1로 하면 x - arr[mid + 1] arr[mid + 1 - k] - x이므로 오른쪽 슬라이딩
-// 6. 오른쪽 슬라이딩은 right = mid 로 한다면 x - arr[]
+// 6. 왼쪽 슬라이딩은 right = mid 로 한다면 x - arr[]
 class Solution {
     public List<Integer> findClosestElements(int[] arr, int k, int x) {
         int left = 0, right = arr.length - k;
