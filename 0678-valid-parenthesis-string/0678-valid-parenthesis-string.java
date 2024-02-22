@@ -8,15 +8,18 @@ class Solution {
                 leftMin++;
             } else if(s.charAt(i) == ')'){
                 leftMax--;
-                leftMin--;
+                if(leftMin > 0){
+                    leftMin--;
+                }
             }else{
                 leftMax++;
-                leftMin--;
+                if(leftMin > 0) {
+                    leftMin--;
+                }
             }
             if(leftMax < 0) {
                 return false;
             }
-            leftMin = Math.max(leftMin, 0);
         }
         return leftMin == 0;
     }
