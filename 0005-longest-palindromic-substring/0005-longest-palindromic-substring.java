@@ -1,20 +1,36 @@
-// string 길이부터 1까지 길이를 줄여나가면서 palindrome인지 확인하는 방법
-class Solution {
+public class Solution {
     public String longestPalindrome(String s) {
-        for(int size = s.length(); size > 1; size--) {
-            for(int j = 0; size + j <= s.length(); j++) {
-                boolean valid = true;
-                for(int i = 0; i < size / 2; i++) {
-                    if(s.charAt(i + j) != s.charAt(j + size - i - 1)) {
-                        valid = false;
-                        break;
-                    }
-                }
-                if(valid) {
-                    return s.substring(j, j + size);
-                }
+        if (s.length() <= 1) {
+            return s;
+        }
+
+        int maxLen = 1;
+        String maxStr = s.substring(0, 1);
+        s = "#" + s.replaceAll("", "#") + "#";
+        int[] dp = new int[s.length()];
+        int center = 0;
+        int right = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (i < right) {
+                dp[i] = Math.min(right - i, dp[2 * center - i]);
+            }
+
+            while (i - dp[i] - 1 >= 0 && i + dp[i] + 1 < s.length() && s.charAt(i - dp[i] - 1) == s.charAt(i + dp[i] + 1)) {
+                dp[i]++;
+            }
+
+            if (i + dp[i] > right) {
+                center = i;
+                right = i + dp[i];
+            }
+
+            if (dp[i] > maxLen) {
+                maxLen = dp[i];
+                maxStr = s.substring(i - dp[i], i + dp[i] + 1).replaceAll("#", "");
             }
         }
-        return s.substring(0,1);
+
+        return maxStr;
     }
 }
