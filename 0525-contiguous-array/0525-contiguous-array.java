@@ -1,19 +1,19 @@
-// 0 1 0 1
-// -1 1 -1 1 가정
-// -1 0 -1 0  sum이 같을 경우 인덱스 가장 작은 거 - 순회 인덱스가 subArray의 길이
-// 가장 큰 subArray 길이로 설정
+// -1 1 -1 1 -1 1
+// -1 0 -1 0 -1 0
+// 0. 1. 2 3 4. 5
+// -1 -1 1 1 -1 -1
+// -1 -2 -1 0 -1 -2
 class Solution {
     public int findMaxLength(int[] nums) {
-        int sum = 0;
-        int answer = 0;
-        Map<Integer,Integer> sumAndCount = new HashMap<>();
-        sumAndCount.put(0, -1);
+        Map<Integer, Integer> sumAndIndex = new HashMap<>();
+        sumAndIndex.put(0, -1);
+        int sum = 0, answer = 0;
         for(int i = 0; i < nums.length; i++) {
             sum += nums[i] * 2 - 1;
-            if(sumAndCount.containsKey(sum)) {
-                answer= Math.max(answer, i - sumAndCount.get(sum));
+            if(sumAndIndex.containsKey(sum)){
+                answer = Math.max(answer, i - sumAndIndex.get(sum));
             } else {
-                sumAndCount.put(sum, i);
+                sumAndIndex.put(sum, i);
             }
         }
         return answer;
