@@ -1,16 +1,21 @@
+// jump 만큼 순회
+// jump 가장 큰 값으로 갱신
+// 순회하면서 인덱스가 nums length와 같은지 체크, 같으면 true
 class Solution {
     public boolean canJump(int[] nums) {
-        int maxJump = 0;
-        int jump = 0;
-        for(int i = 0; i < nums.length; i++) {
-            if(jump < i) {
-                return false;
+        int jump = nums[0];
+        int i = 1;
+        while(jump > 0) {
+            jump--;
+            if(i == nums.length) {
+                return true;
             }
-            maxJump = Math.max(maxJump, i + nums[i]);
-            if(jump == i) {
-                jump = maxJump;
-            }
+            jump = Math.max(jump, nums[i]);
+            i++;
         }
-        return true;
+        if(i == nums.length) {
+            return true;
+        }
+        return false;
     }
 }
