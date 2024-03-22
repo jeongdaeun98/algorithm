@@ -1,14 +1,12 @@
-// 자신으로부터 앞에 인덱스를 더한 것과 자신 중 가장 큰 것을 dp 에 저장.
-// 가장 큰 값 answer로 리턴
+// -2 1 -3 4 -1 2 1 -5 4
+// -1 1  
 class Solution {
     public int maxSubArray(int[] nums) {
-        int[] dp = new int[nums.length];
-        int answer = nums[0];
-        dp[0] = nums[0];
+        int maxNum = nums[0];
         for(int i = 1; i < nums.length; i++) {
-            dp[i] = Math.max(dp[i - 1] + nums[i], nums[i]);
-            answer = Math.max(answer, dp[i]);
+           nums[i] = Math.max(nums[i], nums[i] + nums[i - 1]); 
+            maxNum = Math.max(maxNum, nums[i]);
         }
-        return answer;
+        return maxNum;
     }
 }
