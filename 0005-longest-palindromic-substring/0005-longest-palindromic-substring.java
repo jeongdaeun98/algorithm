@@ -4,7 +4,7 @@ class Solution {
             for(int j = 0; j + i <= s.length(); j++) {
                 String str = s.substring(j, j + i);
                 boolean isValid = true;
-                for(int k = 0; k < str.length() / 2; k++) {
+                for(int k = 0; k < i / 2; k++) {
                     if(str.charAt(k) != str.charAt(str.length() - k - 1)) {
                         isValid = false;
                         break;
