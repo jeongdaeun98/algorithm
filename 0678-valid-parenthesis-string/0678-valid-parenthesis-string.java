@@ -1,26 +1,26 @@
-//
 class Solution {
     public boolean checkValidString(String s) {
         int leftMax = 0, leftMin = 0;
         for(int i = 0; i < s.length(); i++) {
             if(s.charAt(i) == '(') {
-                leftMax++;
+               leftMax++;
                 leftMin++;
-            } else if(s.charAt(i) == ')'){
+            } else if(s.charAt(i) == ')') {
                 leftMax--;
-                if(leftMin > 0){
+                if(leftMin > 0) {
                     leftMin--;
                 }
-            }else{
+            } else {
                 leftMax++;
                 if(leftMin > 0) {
                     leftMin--;
                 }
             }
             if(leftMax < 0) {
-                return false;
-            }
+            return false;
         }
+        }
+        
         return leftMin == 0;
     }
 }
