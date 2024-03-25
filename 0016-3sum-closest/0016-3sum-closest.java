@@ -1,21 +1,20 @@
-// 순회하면서 left와 right의 sum을 저장
 class Solution {
     public int threeSumClosest(int[] nums, int target) {
-        int absMinusNum = Integer.MAX_VALUE, answer = nums[0] + nums[1] + nums[2];
         Arrays.sort(nums);
+        int answer = nums[0] + nums[1] + nums[2];
+        int minDifference = Math.abs(answer - target);
         for(int i = 0; i < nums.length; i++) {
             int left = i + 1, right = nums.length - 1;
-            while(left < right) {
-                int sum = nums[left] + nums[right] + nums[i];
-                if(absMinusNum > Math.abs(target - sum)) {
+            while(left< right) {
+                int sum = nums[left] + nums[i] + nums[right];
+                if(Math.abs(sum - target) < minDifference) {
                     answer = sum;
-                    absMinusNum = Math.abs(target - sum);
+                    minDifference = Math.abs(sum - target);
                 }
-                if(target > sum) {
-                    left++;
-                } else {
+                if(sum > target) {
                     right --;
-                    
+                } else {
+                    left++;
                 }
             }
         }
