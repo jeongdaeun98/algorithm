@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main {
+public class BruteForce_10870 {
     //숫자 입력
     public static int solutionInt() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -22,7 +22,7 @@ public class Main {
         }
         return fibonacci(num - 1) + fibonacci(num - 2);
     }
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws IOException {
         System.out.println(fibonacci(solutionInt()));
 
     }
